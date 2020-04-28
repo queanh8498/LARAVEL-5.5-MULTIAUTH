@@ -1,7 +1,5 @@
 @extends('layouts.admin.master')
 
-
-
 @section('content')
 	<body class="">
     <div class="wrapper">
