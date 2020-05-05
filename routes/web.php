@@ -30,6 +30,18 @@ Route::prefix('admin')->group(function()
 	Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 	Route::get('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
 	Route::get('/', 'AdminController@index')->name('admin.dashboard');
+
+	Route::get('/danhsachsanpham', 'sanphamController@index')->name('admin.danhsachsanpham.index');
+	Route::get('/danhsachsanpham', 'sanphamController@edit')->name('admin.danhsachsanpham.edit');
+	Route::get('/danhsachsanpham', 'sanphamController@create')->name('admin.danhsachsanpham.create');
+
+	Route::get('/danhsachloai', 'loaisanphamController@index')->name('admin.danhsachloai.index');
+	Route::get('/danhsachloai', 'loaisanphamController@edit')->name('admin.danhsachloai.edit');
+	Route::get('/danhsachloai', 'loaisanphamController@create')->name('admin.danhsachloai.create');
 	
+	Route::resource('/danhsachsanpham', 'sanphamController');
+	Route::resource('/danhsachloai', 'loaisanphamController');
+
 });
+// Route::get('/admin/danhsachsanpham', 'sanphamController@index')->name('admin.danhsachsanpham.index');
 

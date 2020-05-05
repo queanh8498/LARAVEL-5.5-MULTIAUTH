@@ -13,8 +13,17 @@
 <!-- demo init -->
 <script src="{{ asset('assets/js/plugins/demo.js') }}"></script>
 
+<!-- them -->
 
+<script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/popperjs/popper.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 
+    <!-- Thư viện Jquery validation -->
+    <script src="{{ asset('vendor/jquery-validation/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('vendor/jquery-validation/localization/messages_vi.min.js') }}"></script>
+
+<!-- end them -->
 <script src="{{ asset('assets/js/plugins/jquery.dataTables.js') }}"></script>
 
   <script src="{{ asset('assets/js/plugins/dataTables.bootstrap4.js') }}"></script>

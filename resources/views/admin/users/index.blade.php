@@ -1,7 +1,5 @@
 @extends('layouts.admin.master')
 
-
-
 @section('content')
 	<body class="">
     <div class="wrapper">
@@ -19,7 +17,7 @@
                         <span class="navbar-toggler-icon icon-bar"></span>
                         <span class="navbar-toggler-icon icon-bar"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                    <!-- <div class="collapse navbar-collapse justify-content-end" id="navigation">
                         <form class="navbar-form">
                             <div class="input-group no-border">
                                 <input type="text" value="" class="form-control" placeholder="Search...">
@@ -28,17 +26,17 @@
                                     <div class="ripple-container"></div>
                                 </button>
                             </div>
-                        </form>
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
+                        </form> -->
+                        <!-- <ul class="navbar-nav">
+                             <li class="nav-item">
                                 <a class="nav-link" href="#pablo">
                                     <i class="material-icons">dashboard</i>
                                     <p>
                                         <span class="d-lg-none d-md-block">Stats</span>
                                     </p>
                                 </a>
-                            </li>
-                            <li class="nav-item dropdown">
+                            </li> -->
+                            <!-- <li class="nav-item dropdown">
                                 <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="material-icons">notifications</i>
                                     <span class="notification">5</span>
@@ -53,194 +51,32 @@
                                     <a class="dropdown-item" href="#">Another Notification</a>
                                     <a class="dropdown-item" href="#">Another One</a>
                                 </div>
-                            </li>
-                            <li class="nav-item">
+                            </li> -->
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="#pablo">
                                     <i class="material-icons">person</i>
                                     <p>
                                         <span class="d-lg-none d-md-block">Account</span>
                                     </p>
                                 </a>
-                            </li>
+                            </li> 
                         </ul>
-                    </div>
+                    </div>-->
                 </div>
             </nav>
             <!-- End Navbar -->
             <div class="content">
-                {{-- <div class="container-fluid">
-                   
-                    <table id="order-listing" class="table">
-                      <thead>
-                        <tr>
-                            <th>Order #</th>
-                            <th>Purchased On</th>
-                            <th>Customer</th>
-                            <th>Ship to</th>
-                            <th>Base Price</th>
-                            <th>Purchased Price</th>
-                            <th>Status</th>
-                            <th>Actions</th>
-                        </tr>
-                      </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>2012/08/03</td>
-                            <td>Edinburgh</td>
-                            <td>New York</td>
-                            <td>$1500</td>
-                            <td>$3200</td>
-                            <td>
-                              <label class="badge badge-info">On hold</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>2015/04/01</td>
-                            <td>Doe</td>
-                            <td>Brazil</td>
-                            <td>$4500</td>
-                            <td>$7500</td>
-                            <td>
-                              <label class="badge badge-danger">Pending</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>2010/11/21</td>
-                            <td>Sam</td>
-                            <td>Tokyo</td>
-                            <td>$2100</td>
-                            <td>$6300</td>
-                            <td>
-                              <label class="badge badge-success">Closed</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>2016/01/12</td>
-                            <td>Sam</td>
-                            <td>Tokyo</td>
-                            <td>$2100</td>
-                            <td>$6300</td>
-                            <td>
-                              <label class="badge badge-success">Closed</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>2017/12/28</td>
-                            <td>Sam</td>
-                            <td>Tokyo</td>
-                            <td>$2100</td>
-                            <td>$6300</td>
-                            <td>
-                              <label class="badge badge-success">Closed</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>2000/10/30</td>
-                            <td>Sam</td>
-                            <td>Tokyo</td>
-                            <td>$2100</td>
-                            <td>$6300</td>
-                            <td>
-                              <label class="badge badge-info">On-hold</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>2011/03/11</td>
-                            <td>Cris</td>
-                            <td>Tokyo</td>
-                            <td>$2100</td>
-                            <td>$6300</td>
-                            <td>
-                              <label class="badge badge-success">Closed</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>2015/06/25</td>
-                            <td>Tim</td>
-                            <td>Italy</td>
-                            <td>$6300</td>
-                            <td>$2100</td>
-                            <td>
-                              <label class="badge badge-info">On-hold</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>2016/11/12</td>
-                            <td>John</td>
-                            <td>Tokyo</td>
-                            <td>$2100</td>
-                            <td>$6300</td>
-                            <td>
-                              <label class="badge badge-success">Closed</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>2003/12/26</td>
-                            <td>Tom</td>
-                            <td>Germany</td>
-                            <td>$1100</td>
-                            <td>$2300</td>
-                            <td>
-                              <label class="badge badge-danger">Pending</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                      </tbody>
-                    </table> 
-                </div> --}}
-
-
-
                 <div class="container-fluid">
 
                     <div class="card">
-                        <div class="card-header card-header-warning">
-                            <h4 class="card-title ">Simple Table</h4>
-                            <p class="card-category"> Here is a subtitle for this table</p>
+                        <div class="card-header card-header-dark text-white bg-dark text-center">
+                            <h4 class="card-title ">USER TABLE</h4>
+                            <p class="card-category">-- Bảng User --</p>
                         </div>
 
                         <div class="card-body table-responsive">
                             <table class="table" id="order-listing">
-                                <thead class=" text-primary"> 
+                                <thead class=" text-dark"> 
                                     <th>
                                         Tài khoản
                                     </th>

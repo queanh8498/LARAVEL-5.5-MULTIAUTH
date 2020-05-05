@@ -1,7 +1,7 @@
- <div class="sidebar" data-color="green" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+ <div class="sidebar " data-color="green" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
             <div class="logo">
-                <a href="/" class="simple-text logo-normal">
-                    Multiauth
+                <a href="" class="simple-text logo-normal">
+                    MANAGEMENT PAGE
                 </a>
             </div>
             <div class="sidebar-wrapper">
@@ -21,7 +21,20 @@
                         </a>
                     </li>
 
-                {{--     <li class="nav-item ">
+                    <li class="nav-item {{ Request::is('admin/danhsachsanpham*') ? 'active' : '' }} ">
+                        <a class="nav-link" href="{{ route('danhsachsanpham.index') }}">
+                            <i class="material-icons">bubble_chart</i>
+                            <p>Product management</p>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ Request::is('admin/danhsachloai*') ? 'active' : '' }} ">
+                        <a class="nav-link" href="{{ route('danhsachloai.index') }}">
+                            <i class="material-icons">bubble_chart</i>
+                            <p>Category management</p>
+                        </a>
+                    </li>
+
+                     <li class="nav-item ">
                         <a class="nav-link" href="../examples/user.html">
                             <i class="material-icons">person</i>
                             <p>User Profile</p>
@@ -62,7 +75,7 @@
                             <i class="material-icons">unarchive</i>
                             <p>Upgrade to PRO</p>
                         </a>
-                    </li> --}}
+                    </li>
                 </ul>
             </div>
         </div>
