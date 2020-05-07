@@ -56,6 +56,7 @@
                                         <a href="{{ route('admin.logout') }}">
                                             Logout
                                         </a>
+                                        <i class="fas fa-sign-out-alt"></i>
                                     </li>
                                 </ul>
                             </li>

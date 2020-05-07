@@ -3,7 +3,7 @@
 
 {{-- Thay thế nội dung vào Placeholder `title` của view `frontend.layouts.master` --}}
 @section('title')
-Shop Trái Cây - Ngon Ngon
+H O U Z I E
 @endsection
 
 {{-- Thay thế nội dung vào Placeholder `custom-css` của view `frontend.layouts.master` --}}
@@ -15,7 +15,6 @@ Shop Trái Cây - Ngon Ngon
 <!-- Slider -->
 @include('frontend.widgets.homepage-slider')
 <!-- Banner -->
-@include('frontend.widgets.homepage-banner', [$data = $ds_top3_newest_loaisanpham])
 <!-- Product -->
 @include('frontend.widgets.product-list', [$data = $danhsachsanpham])
 @endsection

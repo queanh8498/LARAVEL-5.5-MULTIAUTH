@@ -3,7 +3,7 @@
 
 {{-- Thay thế nội dung vào Placeholder `title` của view `frontend.layouts.master` --}}
 @section('title')
-Giới thiệu Shop Trái Cây - Ngon Ngon
+HOUZIE | Order completed
 @endsection
 
 {{-- Thay thế nội dung vào Placeholder `custom-css` của view `frontend.layouts.master` --}}
@@ -13,7 +13,7 @@ Giới thiệu Shop Trái Cây - Ngon Ngon
 {{-- Thay thế nội dung vào Placeholder `main-content` của view `frontend.layouts.master` --}}
 @section('main-content')
 <!-- Title page -->
-<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('{{ asset('img/slider/two.jpg') }}');">
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('{{ asset('storage/photos/page/order.jpg') }}');">
     <h2 class="ltext-105 cl0 txt-center">
         {{ __('laravelweb.order_finish')}}
     </h2>
@@ -43,7 +43,7 @@ Giới thiệu Shop Trái Cây - Ngon Ngon
             <div class="col-11 col-md-5 col-lg-4 m-lr-auto">
                 <div class="how-bor1 ">
                     <div class="hov-img0">
-                        <img src="{{ asset('img/about/about4.jpg') }}" alt="IMG">
+                        <img src="{{ asset('storage/photos/page/order-finish.jpg') }}" alt="IMG">
                     </div>
                 </div>
             </div>

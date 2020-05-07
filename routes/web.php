@@ -15,6 +15,31 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/', 'FrontendController@index')->name('frontend.home');
+Route::get('/san-pham', 'FrontendController@product')->name('frontend.product');
+//Tạo trang Chi tiết Sản phẩm (product-detail)
+Route::get('/san-pham/{id}', 'FrontendController@productDetail')->name('frontend.productDetail');
+
+//trang Liên hệ
+Route::get('/lien-he', 'FrontendController@contact')->name('frontend.contact');
+Route::post('/lien-he/goi-loi-nhan', 'FrontendController@sendMailContactForm')->name('frontend.contact.sendMailContactForm');
+
+
+//Tạo trang thanh toán (checkout)
+Route::get('/gio-hang', 'FrontendController@cart')->name('frontend.cart');
+
+//Tạo đơn hàng và gởi mail xác nhận
+Route::get('/gio-hang', 'FrontendController@cart')->name('frontend.cart');
+Route::post('/dat-hang', 'FrontendController@order')->name('frontend.order');
+Route::get('/dat-hang/hoan-tat', 'FrontendController@orderFinish')->name('frontend.orderFinish');
+
+Route::get('setLocale/{locale}', function ($locale) {
+	if (in_array($locale, Config::get('app.locales'))) {
+	  Session::put('locale', $locale);
+	}
+	return redirect()->back();
+})->name('app.setLocale');
+
 Auth::routes();
 Route::get('/users/logout', 'Auth\LoginController@userLogout')->name('user.logout');
 
@@ -38,7 +63,7 @@ Route::prefix('admin')->group(function()
 	Route::get('/danhsachloai', 'loaisanphamController@index')->name('admin.danhsachloai.index');
 	Route::get('/danhsachloai', 'loaisanphamController@edit')->name('admin.danhsachloai.edit');
 	Route::get('/danhsachloai', 'loaisanphamController@create')->name('admin.danhsachloai.create');
-	
+
 	Route::resource('/danhsachsanpham', 'sanphamController');
 	Route::resource('/danhsachloai', 'loaisanphamController');
 
