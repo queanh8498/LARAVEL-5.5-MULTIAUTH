@@ -26,6 +26,7 @@ HOUZIE | Cart
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <h2>Thông tin khách hàng</h2>
+               
                 <!-- Div Thông báo lỗi 
                 Chỉ hiển thị khi các validate trong form `orderForm` không hợp lệ => orderForm.$invalid = true
                 Sử dụng tiền chỉ lệnh ng-show="orderForm.$invalid"
@@ -103,7 +104,7 @@ HOUZIE | Cart
                 
                 </div>
         </div>
-
+            
             <div class="col-lg-6 col-md-6">
                 <h2>Thông tin Đặt hàng</h2>
                 <!-- Div Thông báo lỗi 
@@ -167,6 +168,7 @@ HOUZIE | Cart
                     <li><span class="error" ng-show="orderForm.tt_id.$error.required">Vui lòng chọn Phương thức thanh toán</span></li>
                 </div>
             </div>
+            
         </div>
 
         <!-- Div Thông báo validate hợp lệ 
@@ -232,7 +234,7 @@ HOUZIE | Cart
                     data: JSON.stringify(dataInputOrderForm)
                 }).then(function successCallback(response) {
                     // Clear giỏ hàng ngCart
-                    //$scope.ngCart.empty();
+                    $scope.ngCart.empty(true);
 
                     // Gởi mail thành công, thông báo cho khách hàng biết
                     swal('Đơn hàng hoàn tất!', 'Xin cám ơn Quý khách!', 'success');

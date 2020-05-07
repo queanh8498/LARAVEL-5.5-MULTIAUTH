@@ -44,7 +44,7 @@ class LoginController extends Controller
     }
 
 
-     public function userLogout()
+    public function userLogout()
         {
             Auth::guard('web')->logout();
 
