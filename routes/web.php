@@ -64,8 +64,16 @@ Route::prefix('admin')->group(function()
 	Route::get('/danhsachloai', 'loaisanphamController@edit')->name('admin.danhsachloai.edit');
 	Route::get('/danhsachloai', 'loaisanphamController@create')->name('admin.danhsachloai.create');
 
+	Route::get('/danhsachdonhang', 'donhangController@index')->name('admin.danhsachdonhang.index');
+	Route::get('/admin/danhsachdonhang/active{id}', 'donhangController@active')->name('danhsachdonhang.active');
+
+	// Tạo route Báo cáo Đơn hàng
+	Route::get('/baocao/donhang', 'baocaoController@donhang')->name('admin.baocao.donhang');
+	Route::get('/baocao/donhang/data', 'baocaoController@donhangData')->name('admin.baocao.donhang.data');
+
 	Route::resource('/danhsachsanpham', 'sanphamController');
 	Route::resource('/danhsachloai', 'loaisanphamController');
+	Route::resource('/danhsachdonhang', 'donhangController');
 
 });
 // Route::get('/admin/danhsachsanpham', 'sanphamController@index')->name('admin.danhsachsanpham.index');

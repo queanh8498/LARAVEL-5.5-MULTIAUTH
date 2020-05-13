@@ -15,12 +15,13 @@ class CreateDonhangTable extends Migration
     {
         Schema::create('donhang', function (Blueprint $table) {
             $table->bigIncrements('dh_id');
-            //$table->integer('kh_id')->unsigned();
+            $table->string('kh_email');
+            $table->unsignedBigInteger('kh_id');
             $table->dateTime('dh_thoigiandathang')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->dateTime('dh_thoigiannhanhang');
             $table->string('dh_diachi', 250);
             $table->string('dh_dienthoai', 11);
-            $table->unsignedTinyInteger('dh_dathanhtoan')->default('0')->comment('Đã thanh toán tiền (TH tặng quà)');
+            $table->unsignedTinyInteger('dh_dathanhtoan')->default('0')->comment('Đã thanh toán tiền');
             //$table->unsignedTinyInteger('nguoigiaohang')->default('1')->comment('1-chưa phân công');
             $table->dateTime('dh_ngaylapphieugiao')->nullable()->default(NULL);
             $table->dateTime('dh_ngaygiaohang')->nullable()->default(NULL)->comment('Thời điểm khách nhận được hàng');
@@ -30,7 +31,8 @@ class CreateDonhangTable extends Migration
             $table->unsignedTinyInteger('vc_id');
             $table->unsignedTinyInteger('tt_id');
             
-            //$table->foreign('kh_id')->references('id')->on('users')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('kh_id')->references('kh_id')->on('khachhang')->onDelete('CASCADE')->onUpdate('CASCADE');
+            //$table->foreign('kh_email')->references('kh_email')->on('khachhang')->onDelete('CASCADE')->onUpdate('CASCADE');
             //$table->foreign('nd_giaohang')->references('nd_id')->on('nguoidung')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->foreign('tt_id')->references('tt_id')->on('thanhtoan')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->foreign('vc_id')->references('vc_id')->on('vanchuyen')->onDelete('CASCADE')->onUpdate('CASCADE');

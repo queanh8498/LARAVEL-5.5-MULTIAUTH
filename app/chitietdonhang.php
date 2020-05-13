@@ -14,4 +14,8 @@ class chitietdonhang extends Model
 
     protected $primaryKey   = ['dh_id', 'sp_id'];
     public    $incrementing = false;
+
+    public function sanpham(){
+        return $this->belongsTo('App\sanpham', 'sp_id', 'sp_id');
+    }
 }

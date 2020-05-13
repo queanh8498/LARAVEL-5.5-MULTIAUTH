@@ -33,6 +33,18 @@
                             <p>Category management</p>
                         </a>
                     </li>
+                    <li class="nav-item {{ Request::is('admin/danhsachdonhang*') ? 'active' : '' }} ">
+                        <a class="nav-link" href="{{ route('danhsachdonhang.index') }}">
+                            <i class="material-icons">bubble_chart</i>
+                            <p>Order management</p>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ Request::is('admin/baocao*') ? 'active' : '' }} ">
+                        <a class="nav-link" href="{{ route('admin.baocao.donhang') }}">
+                            <i class="material-icons">bubble_chart</i>
+                            <p>Statistics management</p>
+                        </a>
+                    </li>
 
                      <li class="nav-item ">
                         <a class="nav-link" href="../examples/user.html">

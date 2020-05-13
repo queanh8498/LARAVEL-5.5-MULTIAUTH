@@ -31,36 +31,11 @@ HOUZIE | Cart
                 Chỉ hiển thị khi các validate trong form `orderForm` không hợp lệ => orderForm.$invalid = true
                 Sử dụng tiền chỉ lệnh ng-show="orderForm.$invalid"
                 -->
-                <div class="alert alert-danger" ng-show="orderForm.$invalid">
-                    <ul>
-                        <!-- Thông báo lỗi kh_email -->
-                        <li><span class="error" ng-show="orderForm.kh_email.$error.required">Vui lòng nhập email</span></li>
-                        <li><span class="error" ng-show="!orderForm.kh_email.$error.required && orderForm.kh_email.$error.pattern">Chỉ chấp nhập GMAIL, vui lòng kiểm tra lại</span></li>
+                 <div> 
+                  
+                 </div> 
 
-                        <!-- Thông báo lỗi kh_taiKhoan
-                        <li><span class="error" ng-show="orderForm.kh_taikhoan.$error.required">Vui lòng nhập tên tài khoản</span></li>
-                        
-                        <li><span class="error" ng-show="orderForm.kh_hoten.$error.required">Vui lòng nhập Họ tên</span></li>
-                        
-                        <li><span class="error" ng-show="orderForm.kh_gioitinh.$error.required">Vui lòng chọn giới tính</span></li> -->
-
-                        <!-- Thông báo lỗi kh_diaChi -->
-                        <li><span class="error" ng-show="orderForm.kh_diachi.$error.minlength">Địa chỉ phải > 6 ký tự</span></li>
-                        <li><span class="error" ng-show="orderForm.kh_diachi.$error.maxlength">Địa chỉ phải <= 250 ký tự</span> </li>
-                        <li><span class="error" ng-show="orderForm.kh_dienthoai.$error.minlength">Điện thoại phải > 6 ký tự</span></li>
-                        <li><span class="error" ng-show="orderForm.kh_dienthoai.$error.maxlength">Điện thoại phải <= 11 ký tự</span> </li> </li> </div> <div class="form-group">
-                        
-                </div>
-
-                <!-- <div>                    
-                    <label for="kh_taikhoan">Tài khoản:</label>
-                    <input type="text" class="form-control" id="kh_taikhoan" name="kh_taikhoan" ng-model="kh_taikhoan" ng-minlength="6" ng-maxlength="50" ng-required=true>
-                    <li><span class="error" ng-show="orderForm.kh_taikhoan.$error.required">Vui lòng nhập tên tài khoản</span></li>
-                    <li><span class="error" ng-show="orderForm.kh_taikhoan.$error.minlength">Tên tài khoản phải > 6 ký tự</span></li>
-                    <li><span class="error" ng-show="orderForm.kh_taikhoan.$error.maxlength">Tên tài khoản phải <= 50 ký tự</span> </li> 
-                    <li><span class="valid" ng-show="orderForm.kh_taikhoan.$valid">Hợp lệ</span></li>
-
-                </div> -->
+               
                 <div class="form-group">
                     <label for="kh_hoten">Họ tên:</label>
                     <input type="text" class="form-control" id="kh_hoten" name="kh_hoten" ng-model="kh_hoten" ng-minlength="6" ng-maxlength="100" ng-required=true>
@@ -111,24 +86,7 @@ HOUZIE | Cart
                 Chỉ hiển thị khi các validate trong form `orderForm` không hợp lệ => orderForm.$invalid = true
                 Sử dụng tiền chỉ lệnh ng-show="orderForm.$invalid"
                 -->
-                 <div class="alert alert-danger" ng-show="orderForm.$invalid">
-                    <ul>
-                        <!-- Thông báo lỗi dh_thoiGianDatHang -->
-                        <li><span class="error" ng-show="orderForm.dh_thoigiannhanhang.$error.required">Vui lòng nhập thời gian nhận hàng</span></li>
-
-                        <!-- Thông báo lỗi dh_nguoiNhan -->
-                        <li><span class="error" ng-show="orderForm.dh_diachi.$error.required">Vui lòng nhập Địa chỉ</span></li>
-                        <li><span class="error" ng-show="orderForm.dh_diachi.$error.minlength">Địa chỉ phải > 6 ký tự</span></li>
-                        <li><span class="error" ng-show="orderForm.dh_diachi.$error.maxlength">Địa chỉ phải <= 250 ký tự</span> </li> <!-- Thông báo lỗi dh_dienThoai -->
-                        <li><span class="error" ng-show="orderForm.dh_dienthoai.$error.required">Vui lòng nhập Điện thoại</span></li>
-                        <li><span class="error" ng-show="orderForm.dh_dienthoai.$error.minlength">Điện thoại phải > 6 ký tự</span></li>
-                        <li><span class="error" ng-show="orderForm.dh_dienthoai.$error.maxlength">Điện thoại phải <= 11 ký tự</span> </li> <!-- Thông báo lỗi dh_nguoiGui -->
-                        <li><span class="error" ng-show="orderForm.vc_id.$error.required">Vui lòng chọn Hình thức vận chuyển</span></li>
-
-                        <!-- Thông báo lỗi tt_ma -->
-                        <li><span class="error" ng-show="orderForm.tt_id.$error.required">Vui lòng chọn Phương thức thanh toán</span></li>
-                        </li>
-                </div>
+                
                 <div class="form-group">
                     <label for="dh_thoigiannhanhang">Thời gian nhận hàng mong muốn:</label>
                     <input type="date" class="form-control" id="dh_thoigiannhanhang" name="dh_thoigiannhanhang" ng-model="dh_thoigiannhanhang" ng-required=true>
@@ -146,8 +104,7 @@ HOUZIE | Cart
                     <input type="text" class="form-control" id="dh_dienthoai" name="dh_dienthoai" ng-model="dh_dienthoai" ng-minlength="6" ng-maxlength="11" ng-required=true>
                     <li><span class="error" ng-show="orderForm.dh_dienthoai.$error.required">Vui lòng nhập Điện thoại</span></li>
                     <li><span class="error" ng-show="orderForm.dh_dienthoai.$error.minlength">Điện thoại phải > 6 ký tự</span></li>
-                    <li><span class="error" ng-show="orderForm.dh_dienthoai.$error.maxlength">Điện thoại phải <= 11 ký tự</span> </li> 
-                       
+                    <li><span class="error" ng-show="orderForm.dh_dienthoai.$error.maxlength">Điện thoại phải <= 11 ký tự</span> </li>          
                 </div>
                
                 <div class="form-group">
@@ -174,7 +131,7 @@ HOUZIE | Cart
                 Chỉ hiển thị khi các validate trong form `orderForm` không hợp lệ => orderForm.$invalid = true
                 Sử dụng tiền chỉ lệnh ng-show="orderForm.$invalid"
                 -->
-                <div class="alert alert-danger" ng-show="orderForm.$invalid">
+                <div>
                     <ul>
                         <!-- Thông báo lỗi kh_email -->
                         <li><span class="error" ng-show="orderForm.kh_email.$error.required">Vui lòng nhập email</span></li>
@@ -236,23 +193,8 @@ HOUZIE | Cart
                 Chỉ hiển thị khi các validate trong form `orderForm` không hợp lệ => orderForm.$invalid = true
                 Sử dụng tiền chỉ lệnh ng-show="orderForm.$invalid"
                 -->
-                 <div class="alert alert-danger" ng-show="orderForm.$invalid">
-                    <ul>
-                        <!-- Thông báo lỗi dh_thoiGianDatHang -->
-                        <li><span class="error" ng-show="orderForm.dh_thoigiannhanhang.$error.required">Vui lòng nhập thời gian nhận hàng</span></li>
-
-                        <!-- Thông báo lỗi dh_nguoiNhan -->
-                        <li><span class="error" ng-show="orderForm.dh_diachi.$error.required">Vui lòng nhập Địa chỉ</span></li>
-                        <li><span class="error" ng-show="orderForm.dh_diachi.$error.minlength">Địa chỉ phải > 6 ký tự</span></li>
-                        <li><span class="error" ng-show="orderForm.dh_diachi.$error.maxlength">Địa chỉ phải <= 250 ký tự</span> </li> <!-- Thông báo lỗi dh_dienThoai -->
-                        <li><span class="error" ng-show="orderForm.dh_dienthoai.$error.required">Vui lòng nhập Điện thoại</span></li>
-                        <li><span class="error" ng-show="orderForm.dh_dienthoai.$error.minlength">Điện thoại phải > 6 ký tự</span></li>
-                        <li><span class="error" ng-show="orderForm.dh_dienthoai.$error.maxlength">Điện thoại phải <= 11 ký tự</span> </li> <!-- Thông báo lỗi dh_nguoiGui -->
-                        <li><span class="error" ng-show="orderForm.vc_id.$error.required">Vui lòng chọn Hình thức vận chuyển</span></li>
-
-                        <!-- Thông báo lỗi tt_ma -->
-                        <li><span class="error" ng-show="orderForm.tt_id.$error.required">Vui lòng chọn Phương thức thanh toán</span></li>
-                        </li>
+                 <div >
+                    
                 </div>
                 <div class="form-group">
                     <label for="dh_thoigiannhanhang">Thời gian nhận hàng mong muốn:</label>
