@@ -59,9 +59,9 @@
 
                         <div class="block2-txt flex-w flex-t p-t-14">
                             <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                <span class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
                                     {{ $sp->sp_ten }}
-                                </a>
+                                </span>
 
                                 <span class="stext-105 cl3">
                                     {{ number_format($sp->sp_giaban, 0, ',',',') }} VNĐ

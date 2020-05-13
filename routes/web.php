@@ -59,12 +59,14 @@ Route::prefix('admin')->group(function()
 	Route::get('/danhsachsanpham', 'sanphamController@index')->name('admin.danhsachsanpham.index');
 	Route::get('/danhsachsanpham', 'sanphamController@edit')->name('admin.danhsachsanpham.edit');
 	Route::get('/danhsachsanpham', 'sanphamController@create')->name('admin.danhsachsanpham.create');
+	Route::get('/danhsachsanpham/print', 'SanPhamController@print')->name('danhsachsanpham.print');
 
 	Route::get('/danhsachloai', 'loaisanphamController@index')->name('admin.danhsachloai.index');
 	Route::get('/danhsachloai', 'loaisanphamController@edit')->name('admin.danhsachloai.edit');
 	Route::get('/danhsachloai', 'loaisanphamController@create')->name('admin.danhsachloai.create');
 
 	Route::get('/danhsachdonhang', 'donhangController@index')->name('admin.danhsachdonhang.index');
+	Route::get('/danhsachdonhang/print', 'donhangController@print')->name('danhsachdonhang.print');
 	Route::get('/admin/danhsachdonhang/active{id}', 'donhangController@active')->name('danhsachdonhang.active');
 
 	// Tạo route Báo cáo Đơn hàng
@@ -76,5 +78,3 @@ Route::prefix('admin')->group(function()
 	Route::resource('/danhsachdonhang', 'donhangController');
 
 });
-// Route::get('/admin/danhsachsanpham', 'sanphamController@index')->name('admin.danhsachsanpham.index');
-

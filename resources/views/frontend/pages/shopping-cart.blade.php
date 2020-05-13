@@ -1,16 +1,12 @@
-{{-- View này sẽ kế thừa giao diện từ `frontend.layouts.master` --}}
 @extends('frontend.layouts.master')
 
-{{-- Thay thế nội dung vào Placeholder `title` của view `frontend.layouts.master` --}}
 @section('title')
 HOUZIE | Cart
 @endsection
 
-{{-- Thay thế nội dung vào Placeholder `custom-css` của view `frontend.layouts.master` --}}
 @section('custom-css')
 @endsection
 
-{{-- Thay thế nội dung vào Placeholder `main-content` của view `frontend.layouts.master` --}}
 @section('main-content')
 <style>
         .error {color: red;}
@@ -87,11 +83,6 @@ HOUZIE | Cart
                 Sử dụng tiền chỉ lệnh ng-show="orderForm.$invalid"
                 -->
                 
-                <div class="form-group">
-                    <label for="dh_thoigiannhanhang">Thời gian nhận hàng mong muốn:</label>
-                    <input type="date" class="form-control" id="dh_thoigiannhanhang" name="dh_thoigiannhanhang" ng-model="dh_thoigiannhanhang" ng-required=true>
-                </div>
-               
                 <div class="form-group">
                     <label for="dh_diachi">Địa chỉ:</label>
                     <input type="text" class="form-control" id="dh_diachi" name="dh_diachi" ng-model="dh_diachi" ng-minlength="6" ng-maxlength="250" ng-required=true>
@@ -196,20 +187,17 @@ HOUZIE | Cart
                  <div >
                     
                 </div>
-                <div class="form-group">
-                    <label for="dh_thoigiannhanhang">Thời gian nhận hàng mong muốn:</label>
-                    <input type="date" class="form-control" id="dh_thoigiannhanhang" name="dh_thoigiannhanhang" ng-model="dh_thoigiannhanhang" ng-required=true>
-                </div>
+                
                
                 <div class="form-group">
-                    <label for="dh_diachi">Địa chỉ:</label>
+                    <label for="dh_diachi">Địa chỉ muốn nhận hàng:</label>
                     <input type="text" class="form-control" id="dh_diachi" name="dh_diachi" ng-model="dh_diachi" ng-minlength="6" ng-maxlength="250" ng-required=true>
                     <li><span class="error" ng-show="orderForm.dh_diachi.$error.required">Vui lòng nhập Địa chỉ</span></li>
                     <li><span class="error" ng-show="orderForm.dh_diachi.$error.minlength">Địa chỉ phải > 6 ký tự</span></li>
                     <li><span class="error" ng-show="orderForm.dh_diachi.$error.maxlength">Địa chỉ phải <= 250 ký tự</span> </li> 
                 </div>
                 <div class="form-group">
-                    <label for="dh_dienthoai">Điện thoại:</label>
+                    <label for="dh_dienthoai">Điện thoại liên hệ nhận hàng:</label>
                     <input type="text" class="form-control" id="dh_dienthoai" name="dh_dienthoai" ng-model="dh_dienthoai" ng-minlength="6" ng-maxlength="11" ng-required=true>
                     <li><span class="error" ng-show="orderForm.dh_dienthoai.$error.required">Vui lòng nhập Điện thoại</span></li>
                     <li><span class="error" ng-show="orderForm.dh_dienthoai.$error.minlength">Điện thoại phải > 6 ký tự</span></li>
@@ -279,7 +267,6 @@ HOUZIE | Cart
                 };
 
                 var dataInputOrderForm_DatHang = {
-                    "dh_thoigiannhanhang": $scope.orderForm.dh_thoigiannhanhang.$viewValue,
                     "dh_diachi": $scope.orderForm.dh_diachi.$viewValue,
                     "dh_dienthoai": $scope.orderForm.dh_dienthoai.$viewValue,
                     "vc_id": $scope.orderForm.vc_id.$viewValue,

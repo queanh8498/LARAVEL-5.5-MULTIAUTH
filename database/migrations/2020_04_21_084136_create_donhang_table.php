@@ -18,13 +18,11 @@ class CreateDonhangTable extends Migration
             $table->string('kh_email');
             $table->unsignedBigInteger('kh_id');
             $table->dateTime('dh_thoigiandathang')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->dateTime('dh_thoigiannhanhang');
             $table->string('dh_diachi', 250);
             $table->string('dh_dienthoai', 11);
             $table->unsignedTinyInteger('dh_dathanhtoan')->default('0')->comment('Đã thanh toán tiền');
             //$table->unsignedTinyInteger('nguoigiaohang')->default('1')->comment('1-chưa phân công');
             $table->dateTime('dh_ngaylapphieugiao')->nullable()->default(NULL);
-            $table->dateTime('dh_ngaygiaohang')->nullable()->default(NULL)->comment('Thời điểm khách nhận được hàng');
             $table->timestamp('dh_ngaytaomoi')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('dh_ngaycapnhat')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->unsignedTinyInteger('dh_trangthai')->default('1')->comment('1-nhận đơn, 2-xử lý đơn, 3-giao hàng, 4-hoàn tất, 5-đổi trả, 6-hủy');

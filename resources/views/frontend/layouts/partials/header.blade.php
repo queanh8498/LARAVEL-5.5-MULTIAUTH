@@ -20,7 +20,7 @@
     border-right: none;
 }
 .dropdown-menu {
-    float: left; 
+    float: left;
     width: 100%; }
 
   .carousel-inner img{
@@ -29,7 +29,7 @@
     margin-left:auto;
     margin-right:auto;
     display:block;
-    
+
     /*3 dong cuối là căn giữa hinh anh. nhớ nhé !!! */
   }
 
@@ -51,7 +51,7 @@
 #header-nav nav.stroke ul li a:hover:after {
   width: 100%;
 }
-  
+
  #header-nav .nav-item a{
   background-color:white;
   color:black;
@@ -86,7 +86,7 @@ nav.stroke ul li a:hover:after {
     font-family: Georgia;
     font-size: 18px;
   }
-  
+
 .dropdown .dropdown-item:hover {
     display: block;
     background-color:salmon;
@@ -96,15 +96,15 @@ nav.stroke ul li a:hover:after {
   margin-left:auto;
   margin-right:auto;
   display:block;
-  
+
 }
- 
+
 .product .sp h1{
   font-family: 'Lora', serif;
 }
 
 .product .container{
-	
+
 	font-size: 20px;
 	/* text-align:center; */
 }
@@ -138,7 +138,7 @@ nav.stroke ul li a:hover:after {
             <nav class="stroke">
             <!-- Links-->
               <ul class="navbar-nav" >
-                
+
                 @guest
 
                 <li class="nav-item">
@@ -146,7 +146,7 @@ nav.stroke ul li a:hover:after {
                 </li>
                 <li class="nav-item">
                       <a class ="nav-link" href="{{ route('register') }}">&nbsp;&nbsp;</i>{{ __('laravelweb.dangky') }}</a>
-                </li> 
+                </li>
                 @else
                 <li class="nav-item">
                     <a class ="nav-link" href="{{ route('user.logout') }}">
@@ -155,55 +155,55 @@ nav.stroke ul li a:hover:after {
                     </a>
                     <li class="nav-item">
                       <a class ="nav-link">&nbsp;&nbsp;</i>{{ __('laravelweb.xinchao') }} {{ Auth::user()->username }}</a>
-                </li>  
+                </li>
                 </li>
                 @endguest
 
-            </nav>               
-        </nav>           
+            </nav>
+        </nav>
         <nav class="navbar navbar-expand-md float-right sticky-top " style="display:inline-block;">
             <nav class="stroke">
          <!-- Links-->
               <ul class="navbar-nav" >
-                      
-               
+
+
                 <li class="nav-item">
                   <a class ="nav-link" href="{{ route('app.setLocale', ['locale' => 'en']) }}">&nbsp;&nbsp;</i>EN</a>
                 </li>
                 <li class="nav-item">
                       <a class ="nav-link" href="{{ route('app.setLocale', ['locale' => 'vi']) }}">&nbsp;&nbsp;</i>VI</a>
-                </li> 
-<!-- 
+                </li>
+<!--
                 <li class="nav-item">
                     <a class ="nav-link" href=""><i class="fa fa-sign-out">&nbsp;&nbsp;</i>Sign Out</a>
                   </li> -->
-                   
+
                     <div class="wrap-icon-header flex-w flex-r-m">
                       <!-- <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="0">
                           <i class="zmdi zmdi-shopping-cart"></i>
                       </div> -->
-                      <ngcart-summary class="js-show-cart" template-url="{{ asset('vendor/ngCart/template/ngCart/summary.html') }}"></ngcart-summary>  
-                    </div> 
+                      <ngcart-summary class="js-show-cart" template-url="{{ asset('vendor/ngCart/template/ngCart/summary.html') }}"></ngcart-summary>
+                    </div>
               </ul>
-            </nav>               
-        </nav>              
-      </div>              
+            </nav>
+        </nav>
+      </div>
     </div>
     <br><br>
     <!-- close div container -->
 <div></div>
-    <div class="container text-center" >
+    <div class="container text-center" style="margin-bottom: 20px; ">
     <br>
-    <h2 style="font-weight:700;line-height: 0;margin-top: 0px; ">H O U Z I E</h2>
-    
-      <div class="container-form-search " style="margin-left:300px">
+    <h1 style="font-weight:700;line-height: 0;margin-top: 0px; ">H O U Z I E</h1>
+
+      <!-- <div class="container-form-search " >
         <form id="form-search" method="get" action="{{ route('frontend.product')}}" class="ng-pristine ng-valid">
           <div class="input-search center-block">
           <input type="text" data-ng-model="textSearch" value ="" name="search-product" auto-complete placeholder="{{ __('laravelweb.search') }}." id="input-search" class="ng-pristine ng-untouched ng-valid ui-autocomplete-input" autocomplete="off">
           <span class="fa fa-search" style="margin-left:200px"></span>
           </div><!--close input-search-->
-        </form>
-      </div><!--close container-form-search-->
+        <!-- </form>
+      </div>close container-form-search --> 
 
 
     </div><!--close "container text-center-->
@@ -220,14 +220,14 @@ nav.stroke ul li a:hover:after {
           <li class="nav-item">
             <a class ="nav-link" href="{{ route('frontend.home') }}">{{ __('laravelweb.home') }}</a>
           </li>
-          
+
           <li class="nav-item">
             <a class ="nav-link" href="{{ route('frontend.product') }}">{{ __('laravelweb.products') }}</a>
           </li>
           <li class="nav-item">
             <a class ="nav-link" href="#">{{ __('laravelweb.inspiration') }}</a>
           </li>
-          
+
           <li class="nav-item">
             <a class ="nav-link" href="{{ route('frontend.contact') }}">{{ __('laravelweb.contact') }}</a>
           </li>

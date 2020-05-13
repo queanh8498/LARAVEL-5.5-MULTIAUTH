@@ -29,6 +29,8 @@
 
                         <div class="card-body table-responsive">
                             <table class="table" id="order-listing">
+                            <a href="{{ route('danhsachsanpham.print') }}" class="btn btn-light">Review PDF</a>
+
                                 <thead class=" text-dark"> 
                                 <!-- <th>STT</th> -->
                                 <th>ID</th>
