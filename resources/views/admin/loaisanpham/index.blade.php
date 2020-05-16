@@ -56,7 +56,7 @@
 
                                     <td >
                                     <a href="{{ route('danhsachloai.edit', ['id' => $l->lsp_id]) }}" class="btn btn-outline-primary pull-left"><i class="fa fa-edit fa-lg" aria-hidden="true"></i></a>
-
+    
                                     <form method="post" action="{{ route('danhsachloai.destroy', ['id' => $l->lsp_id]) }}" class="pull-left">
                                         <!-- Khi gởi Request Xóa dữ liệu, Laravel Framework mặc định chỉ chấp nhận thực thi nếu có gởi kèm field `_method=DELETE` -->
                                         <input type="hidden" name="_method" value="DELETE" />

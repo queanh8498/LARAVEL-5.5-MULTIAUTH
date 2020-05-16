@@ -9,12 +9,17 @@ use App\loaisanpham;
 use App\hinhanh;
 use App\chatlieu;
 use App\donvitinh;
+use App\Admin;
 use Session;
 use Storage;
 
 
 class sanphamController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
     /**
      * Display a listing of the resource.
      *
