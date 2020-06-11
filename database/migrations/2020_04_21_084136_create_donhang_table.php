@@ -30,8 +30,6 @@ class CreateDonhangTable extends Migration
             $table->unsignedTinyInteger('tt_id');
             
             $table->foreign('kh_id')->references('kh_id')->on('khachhang')->onDelete('CASCADE')->onUpdate('CASCADE');
-            //$table->foreign('kh_email')->references('kh_email')->on('khachhang')->onDelete('CASCADE')->onUpdate('CASCADE');
-            //$table->foreign('nd_giaohang')->references('nd_id')->on('nguoidung')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->foreign('tt_id')->references('tt_id')->on('thanhtoan')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->foreign('vc_id')->references('vc_id')->on('vanchuyen')->onDelete('CASCADE')->onUpdate('CASCADE');
         });

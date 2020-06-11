@@ -59,21 +59,7 @@ HOUZIE | Cart
                     <li><span class="error" ng-show="!orderForm.kh_email.$error.required && orderForm.kh_email.$error.pattern">Chỉ chấp nhập GMAIL, vui lòng kiểm tra lại</span></li>
                     <li><span class="valid" ng-show="orderForm.kh_email.$valid">Hợp lệ</span></li>
                 </div>
-            
-                <div class="form-group">
-                    <label for="kh_diachi">Địa chỉ:</label>
-                    <input type="text" class="form-control" id="kh_diachi" name="kh_diachi" ng-model="kh_diachi" ng-minlength="6" ng-maxlength="250">
-                    <li><span class="error" ng-show="orderForm.kh_diachi.$error.minlength">Địa chỉ phải > 6 ký tự</span></li>
-                    <li><span class="error" ng-show="orderForm.kh_diachi.$error.maxlength">Địa chỉ phải <= 250 ký tự</span> </li>
-
-                </div>
-                <div class="form-group">
-                    <label for="kh_dienthoai">Điện thoại:</label>
-                    <input type="text" class="form-control" id="kh_dienthoai" name="kh_dienthoai" ng-model="kh_dienthoai" ng-minlength="6" ng-maxlength="11">
-                    <li><span class="error" ng-show="orderForm.kh_dienthoai.$error.minlength">Điện thoại phải > 6 ký tự</span></li>
-                    <li><span class="error" ng-show="orderForm.kh_dienthoai.$error.maxlength">Điện thoại phải <= 11 ký tự</span> </li>
-                
-                </div>
+               
         </div>
             
             <div class="col-lg-6 col-md-6">
@@ -161,21 +147,6 @@ HOUZIE | Cart
 
                 </div>
                 
-            
-                <div class="form-group">
-                    <label for="kh_diachi">Địa chỉ:</label>
-                    <input type="text" class="form-control" id="kh_diachi" name="kh_diachi" ng-model="kh_diachi" ng-minlength="6" ng-maxlength="250">
-                    <li><span class="error" ng-show="orderForm.kh_diachi.$error.minlength">Địa chỉ phải > 6 ký tự</span></li>
-                    <li><span class="error" ng-show="orderForm.kh_diachi.$error.maxlength">Địa chỉ phải <= 250 ký tự</span> </li>
-
-                </div>
-                <div class="form-group">
-                    <label for="kh_dienthoai">Điện thoại:</label>
-                    <input type="text" class="form-control" id="kh_dienthoai" name="kh_dienthoai" ng-model="kh_dienthoai" ng-minlength="6" ng-maxlength="11">
-                    <li><span class="error" ng-show="orderForm.kh_dienthoai.$error.minlength">Điện thoại phải > 6 ký tự</span></li>
-                    <li><span class="error" ng-show="orderForm.kh_dienthoai.$error.maxlength">Điện thoại phải <= 11 ký tự</span> </li>
-                
-                </div>
         </div>
             
             <div class="col-lg-6 col-md-6">
@@ -262,8 +233,6 @@ HOUZIE | Cart
                     "kh_hoten": $scope.orderForm.kh_hoten.$viewValue,
                     "kh_gioitinh": $scope.orderForm.kh_gioitinh.$viewValue,
                     "kh_email": $scope.orderForm.kh_email.$viewValue,
-                    "kh_diachi": $scope.orderForm.kh_diachi.$viewValue,
-                    "kh_dienthoai": $scope.orderForm.kh_dienthoai.$viewValue,
                 };
 
                 var dataInputOrderForm_DatHang = {

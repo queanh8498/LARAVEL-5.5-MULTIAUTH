@@ -65,6 +65,10 @@ Route::prefix('admin')->group(function()
 	Route::get('/danhsachloai', 'loaisanphamController@edit')->name('admin.danhsachloai.edit');
 	Route::get('/danhsachloai', 'loaisanphamController@create')->name('admin.danhsachloai.create');
 
+	Route::get('/danhsachvanchuyen', 'vanchuyenController@index')->name('admin.vanchuyen.index');
+	Route::get('/danhsachvanchuyen', 'vanchuyenController@edit')->name('admin.vanchuyen.edit');
+	Route::get('/danhsachvanchuyen', 'vanchuyenController@create')->name('admin.vanchuyen.create');
+
 	Route::get('/danhsachdonhang', 'donhangController@index')->name('admin.danhsachdonhang.index');
 	Route::get('/danhsachdonhang/print', 'donhangController@print')->name('danhsachdonhang.print');
 	Route::get('/admin/danhsachdonhang/active{id}', 'donhangController@active')->name('danhsachdonhang.active');
@@ -72,9 +76,18 @@ Route::prefix('admin')->group(function()
 	// Tạo route Báo cáo Đơn hàng
 	Route::get('/baocao/donhang', 'baocaoController@donhang')->name('admin.baocao.donhang');
 	Route::get('/baocao/donhang/data', 'baocaoController@donhangData')->name('admin.baocao.donhang.data');
+	Route::get('/baocao/donhang/spbanchay', 'baocaoController@donhangSpbanchay')->name('admin.baocao.donhang.spbanchay');
+
 
 	Route::resource('/danhsachsanpham', 'sanphamController');
 	Route::resource('/danhsachloai', 'loaisanphamController');
 	Route::resource('/danhsachdonhang', 'donhangController');
+	Route::resource('/danhsachvanchuyen', 'vanchuyenController');
 
 });
+
+Route::get('/p', 'PaymentController@index');
+// route for processing payment
+Route::post('paypal', 'PaymentController@payWithpaypal');
+// route for check status of the payment
+Route::get('status', 'PaymentController@getPaymentStatus');

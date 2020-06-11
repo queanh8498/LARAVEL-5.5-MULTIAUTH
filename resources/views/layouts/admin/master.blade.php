@@ -28,8 +28,11 @@
     @yield('custom-css')
 
 </head>
-
+                                
+                                    
+                                        
     @yield('content')
+
 
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/popperjs/popper.min.js') }}"></script>
@@ -40,6 +43,5 @@
     <script src="{{ asset('vendor/jquery-validation/localization/messages_vi.min.js') }}"></script>
 <!--   Core JS Files   -->
 @yield('custom-scripts')
-
 
 @include('layouts.admin.scripts')
